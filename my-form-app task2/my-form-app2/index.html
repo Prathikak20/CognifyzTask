@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2 Form</title>
+</head>
+<body style="font-family: Arial; background: #f0f0f0; padding: 20px;">
+  <h2 style="color: #333;">Register Form</h2>
+  <form id="myForm" action="/submit" method="POST" style="background: white; padding: 20px; border-radius: 10px;">
+    <label>Name:</label>
+    <input type="text" name="name" id="name" required style="margin-bottom: 10px;"><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" id="email" required style="margin-bottom: 10px;"><br><br>
+
+    <label>Age:</label>
+    <input type="number" name="age" id="age" required style="margin-bottom: 10px;"><br><br>
+
+    <button type="submit" style="padding: 5px 15px;">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function (e) {
+      const age = document.getElementById('age').value;
+      if (age < 18) {
+        alert("You must be 18 or older to submit.");
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
