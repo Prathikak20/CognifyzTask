@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Page</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function validateForm() {
+      const name = document.forms["myForm"]["name"].value;
+      const email = document.forms["myForm"]["email"].value;
+      if (!name || !email.includes("@")) {
+        alert("Please fill all fields correctly");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form name="myForm" action="/submit" method="POST" onsubmit="return validateForm()">
+    <h2>Register</h2>
+    <input type="text" name="name" placeholder="Your Name">
+    <input type="email" name="email" placeholder="Your Email">
+    <button type="submit">Submit</button>
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+  </form>
+</body>
+</html>
