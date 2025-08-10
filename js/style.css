@@ -1,0 +1,28 @@
+button{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(107, 139, 172);
+    color: black;
+    font-weight:bolder;
+
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 50px;
+    transition: background-color 2s ease;
+
+
+}
+
+body{
+    background-color: rgb(240, 240, 240);
+    font-family: Arial, sans-serif;
+    margin:100px;
+    padding: 50x 30px;
+}
+
+.div{
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 14px 2px 5px rgba(179, 64, 179, 0.1);
+}
